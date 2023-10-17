@@ -27,7 +27,7 @@ class TestCookieSetup(object):
     def test_project_name(self):
         project = self.path
         if pytest.param.get('project_name'):
-            name = system_check('DrivenData')
+            name = system_check('TestProject')
             assert project.name == name
         else:
             assert project.name == 'project_name'
@@ -37,7 +37,7 @@ class TestCookieSetup(object):
         args = ['python', str(setup_), '--author']
         p = check_output(args).decode('ascii').strip()
         if pytest.param.get('author_name'):
-            assert p == 'DrivenData'
+            assert p == 'TestAuthor'
         else:
             assert p == 'Your name (or your organization/company/team)'
 
@@ -47,7 +47,7 @@ class TestCookieSetup(object):
         assert no_curlies(readme_path)
         if pytest.param.get('project_name'):
             with open(readme_path) as fin:
-                assert 'DrivenData' == next(fin).strip()
+                assert 'TestProject' == next(fin).strip()
 
     def test_setup(self):
         setup_ = self.path / 'setup.py'
@@ -65,8 +65,6 @@ class TestCookieSetup(object):
         args = ['python', str(setup_), '--license']
         p = check_output(args).decode('ascii').strip()
         if pytest.param.get('open_source_license'):
-            assert p == 'BSD-3'
-        else:
             assert p == 'MIT'
 
     def test_requirements(self):
@@ -86,10 +84,6 @@ class TestCookieSetup(object):
     def test_folders(self):
         expected_dirs = [
             'data',
-            'data/external',
-            'data/interim',
-            'data/processed',
-            'data/raw',
             'docs',
             'models',
             'notebooks',

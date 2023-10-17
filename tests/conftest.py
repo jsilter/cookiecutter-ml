@@ -7,9 +7,9 @@ from cookiecutter import main
 CCDS_ROOT = Path(__file__).parents[1].resolve()
 
 args = {
-        'project_name': 'DrivenData',
-        'author_name': 'DrivenData',
-        'open_source_license': 'BSD-3-Clause',
+        'project_name': 'TestProject',
+        'author_name': 'TestAuthor',
+        'open_source_license': 'MIT',
         'python_interpreter': 'python'
         }
 
