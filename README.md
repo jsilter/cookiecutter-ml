@@ -2,8 +2,6 @@
 
 _A logical, reasonably standardized, but flexible project structure for doing and sharing machine learning work._
 
-Derived from http://drivendata.github.io/cookiecutter-data-science/.
-
 #### [Project homepage](https://github.com/jsilter/cookiecutter-ml)
 
 
@@ -92,3 +90,8 @@ The directory structure of your new project looks like this:
 ------------
 
     py.test tests
+
+### Acknowledgements
+-------------
+
+Derived from http://drivendata.github.io/cookiecutter-data-science/.
